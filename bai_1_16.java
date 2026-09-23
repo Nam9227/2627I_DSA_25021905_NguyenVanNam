@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class bai_1_16 {
-    public static int[] tron(int[]a,int d,int c,int g){
+    public static Double[] tron(Double[]a,int d,int c,int g){
         /*for (int i = d; i <= g; i++) {
             System.out.print(a[i]+" ");
         }
@@ -8,7 +8,7 @@ public class bai_1_16 {
         for (int i = g+1; i <= c; i++) {
             System.out.print(a[i]+" ");
         }*/
-        int[] b=new int[c+1];
+        Double[] b=new Double[c+1];
         int cs=0;
         int i=d,j=g+1;
         while(i<=g && j<=c)
@@ -42,7 +42,7 @@ public class bai_1_16 {
         return a;
     }
 
-    public static int[] sx(int[] a, int d, int c){
+    public static Double[] sx(Double[] a, int d, int c){
         if (d >= c) {
             return a;
         }
@@ -55,14 +55,14 @@ public class bai_1_16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] a = new int[n];
+        Double[] a = new Double[n];
         for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
+            a[i] = sc.nextDouble();
         }
         //sapxep b = new sapxep(a);
         sx(a, 0, n-1);
-        int kc=a[1]-a[0];
-        int d=a[0],c=a[1];
+        Double kc=a[1]-a[0];
+        Double d=a[0],c=a[1];
         for (int i = 0; i < n-1; i++) {
             if (a[i+1]-a[i] <= kc){
                 kc=a[i+1]-a[i];
