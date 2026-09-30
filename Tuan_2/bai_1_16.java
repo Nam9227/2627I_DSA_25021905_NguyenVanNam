@@ -1,3 +1,5 @@
+package Tuan_2;
+
 import java.util.Scanner;
 public class bai_1_16 {
     public static Double[] tron(Double[]a,int d,int c,int g){
